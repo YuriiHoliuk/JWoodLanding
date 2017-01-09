@@ -1,0 +1,41 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: $maintext;
+  text-align: center;
+  padding: (41px/1920px*100%) 0 (36px/1920px*100%);  //41px & 41px-5px(lh)
+  margin-left: $pagepad;
+  margin-right: $pagepad;
+  border-bottom: 1px solid $maingray;
+  @include laptop {
+    font-size: $maintext-l;
+  }
+  @include tablet {
+    font-size: $maintext-xl;
+  }
+  @include phone {
+    font-size: $maintext-fix;
+  }
+}
+
+.menu__item {
+  display: inline-block;
+  padding-right: (42.2px/$maintext*.1em*1rem/1px);  //50px
+  @include phone {
+    padding-right: 5px;
+  }
+}
+
+.menu__link {
+  text-decoration: none;
+  color: $maingray;
+}
+
+.menu__item:last-child {
+  padding-right: 0;
+  @include phone {
+    padding-right: 0;
+  }
+}

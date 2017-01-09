@@ -1,0 +1,17 @@
+.social__button:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__button {
+}
+
+.social__img {
+  @include tablet {
+    width: 8%;
+    height: auto;
+  }
+  @include phone {
+    width: 10%;
+    height: auto;
+  }
+}
