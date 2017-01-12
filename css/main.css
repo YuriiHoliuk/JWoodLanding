@@ -166,6 +166,11 @@
 .menu__item:last-child {
   padding-right: 0; }
 
+.page {
+  font-family: Nexa, sans-serif;
+  text-transform: uppercase;
+  color: #f1f1f1; }
+
 .portfolio {
   text-align: center;
   background: transparent url("../img/background2.jpg") 0 0 no-repeat;
@@ -181,11 +186,6 @@
 
 .portfolio__scroll {
   margin-top: 75px; }
-
-.page {
-  font-family: Nexa, sans-serif;
-  text-transform: uppercase;
-  color: #f1f1f1; }
 
 .scroll {
   text-align: center; }
