@@ -315,6 +315,12 @@ $logopad: 5.5rem;
   }
 }
 
+.page {
+  font-family: Nexa, sans-serif;
+  text-transform: uppercase;
+  color: $maingray;
+}
+
 .portfolio {
   text-align: center;
   background: transparent url('../img/background2.jpg') 0 0 no-repeat;
@@ -344,12 +350,6 @@ $logopad: 5.5rem;
 
 .portfolio__scroll {
   margin-top: 75px;
-}
-
-.page {
-  font-family: Nexa, sans-serif;
-  text-transform: uppercase;
-  color: $maingray;
 }
 
 .scroll {
