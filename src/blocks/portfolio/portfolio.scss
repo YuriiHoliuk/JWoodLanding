@@ -11,20 +11,21 @@
   }
   @include phone {
   }
-}
 
-.portfolio__headline {
-  font-size: $head1;
-  margin-top: (88px/$head1*.1rem*1em/1px);
-  margin-bottom: (80px/$head1*.1rem*1em/1px);
-  @include tablet {
-    font-size: $head1-l;
+  &__headline {
+    font-size: $head1;
+    margin-top: (88px/$head1*.1rem*1em/1px);
+    margin-bottom: (80px/$head1*.1rem*1em/1px);
+    @include tablet {
+      font-size: $head1-l;
+    }
+    @include phone {
+      font-size: $head1-xl;
+    }
   }
-  @include phone {
-    font-size: $head1-xl;
-  }
-}
 
-.portfolio__scroll {
-  margin-top: 75px;
+  &__scroll {
+    margin-top: 75px;
+  }
+
 }

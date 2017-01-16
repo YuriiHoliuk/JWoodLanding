@@ -4,87 +4,88 @@
   @include tablet {
     display: block;
   }
-}
 
-.about-me__layout-left {
-  flex: 1 1;
-  order: -1;
-  @include laptop {
-    flex: 4 1;
+  &__layout-left {
+    flex: 1 1;
+    order: -1;
+    @include laptop {
+      flex: 4 1;
+    }
   }
-}
 
-.about-me__layout-right {
-  padding-left: (54px/(1920px-167px*2)*100%);
-  flex: 1 1;
-  align-self: center;
-  @include laptop {
-    flex: 5 1;
+  &__layout-right {
+    padding-left: (54px/(1920px-167px*2)*100%);
+    flex: 1 1;
+    align-self: center;
+    @include laptop {
+      flex: 5 1;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
-  @include tablet {
-    margin-bottom: 30px;
-  }
-}
 
-.about-me__photo {
-  width: 100%;
-  height: auto;
-  @include tablet {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
+  &__photo {
+    width: 100%;
+    height: auto;
+    @include tablet {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
   }
-}
 
-.about-me__headline {
-  margin-bottom: (8.6rem/$head1*1em);
-  font-size: $head1;
-  color: $mainblack;
-  @include laptop {
-    margin-bottom: (8.6rem/$head1*1em*.6);
+  &__headline {
+    margin-bottom: (8.6rem/$head1*1em);
+    font-size: $head1;
+    color: $mainblack;
+    @include laptop {
+      margin-bottom: (8.6rem/$head1*1em*.6);
+    }
+    @include tablet {
+      
+    }
+    @include phone {
+      font-size: $head1-l;
+    }
   }
-  @include tablet {
-    
-  }
-  @include phone {
-    font-size: $head1-l;
-  }
-}
 
-.about-me__description {
-  margin-bottom: (7.9rem/$maintext*1em);
-  font-family: 'Open Sans', sans-serif;
-  font-size: $maintext;
-  line-height: (50/24);
-  text-transform: none;
-  color: $mainblack;
-  @include laptop {
-    font-size: $maintext-l;
-    margin-bottom: (7.9rem/$maintext*1em*.6);
+  &__description {
+    margin-bottom: (7.9rem/$maintext*1em);
+    font-family: 'Open Sans', sans-serif;
+    font-size: $maintext;
+    line-height: (50/24);
+    text-transform: none;
+    color: $mainblack;
+    @include laptop {
+      font-size: $maintext-l;
+      margin-bottom: (7.9rem/$maintext*1em*.6);
+    }
+    @include tablet {
+      font-size: $maintext-xxl;
+    }
+    @include phone {
+      font-size: $maintext-fix;
+    }
   }
-  @include tablet {
-    font-size: $maintext-xxl;
-  }
-  @include phone {
-    font-size: $maintext-fix;
-  }
-}
 
-.about-me__first-p {
-  margin-bottom: (6rem/$maintext*1em);
-  @include laptop {
-    margin-bottom: (6rem/$maintext*1em*.6);
+  &__first-p {
+    margin-bottom: (6rem/$maintext*1em);
+    @include laptop {
+      margin-bottom: (6rem/$maintext*1em*.6);
+    }
   }
-}
 
-.about-me__signature {
-  @include laptop {
+  &__signature {
+    @include laptop {
 
+    }
+    @include tablet {
+      width: 20%;
+    }
+    @include phone {
+      width: 30%;
+    }
   }
-  @include tablet {
-    width: 20%;
-  }
-  @include phone {
-    width: 30%;
-  }
+
 }

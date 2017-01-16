@@ -1,25 +1,26 @@
 .scroll {
   text-align: center;
-}
 
-.scroll__text {
-  font-weight: bold;
-  font-size: $commontext;
-  margin-bottom: 20px;
-  @include laptop {
-    font-size: $commontext-l;
+  &__text {
+    font-weight: bold;
+    font-size: $commontext;
+    margin-bottom: 20px;
+    @include laptop {
+      font-size: $commontext-l;
+    }
+    @include tablet {
+      font-size: $commontext-xl;
+    }
+    @include phone {
+      font-size: $commontext-fix;
+    }
   }
-  @include tablet {
-    font-size: $commontext-xl;
-  }
-  @include phone {
-    font-size: $commontext-fix;
-  }
-}
 
-.scroll__img {
-  @include phone {
-    width: 8%;
-    height: auto;
+  &__img {
+    @include phone {
+      width: 8%;
+      height: auto;
+    }
   }
+
 }

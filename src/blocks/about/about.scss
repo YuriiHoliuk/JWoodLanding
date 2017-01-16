@@ -6,8 +6,9 @@
     padding-left: $pad-s;
     padding-right: $pad-s;
   }
-}
 
-.about__scroll {
-  margin-top: 75px;
+  &__scroll {
+    margin-top: 75px;
+  }
+
 }

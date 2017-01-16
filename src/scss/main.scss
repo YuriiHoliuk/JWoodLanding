@@ -11,10 +11,11 @@
     padding-left: $pad-s;
     padding-right: $pad-s;
   }
-}
 
-.about__scroll {
-  margin-top: 75px;
+  &__scroll {
+    margin-top: 75px;
+  }
+
 }
 
 .about-me {
@@ -23,138 +24,140 @@
   @include tablet {
     display: block;
   }
+
+  &__layout-left {
+    flex: 1 1;
+    order: -1;
+    @include laptop {
+      flex: 4 1;
+    }
+  }
+
+  &__layout-right {
+    padding-left: (54px/(1920px-167px*2)*100%);
+    flex: 1 1;
+    align-self: center;
+    @include laptop {
+      flex: 5 1;
+    }
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    @include tablet {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__headline {
+    margin-bottom: (8.6rem/$head1*1em);
+    font-size: $head1;
+    color: $mainblack;
+    @include laptop {
+      margin-bottom: (8.6rem/$head1*1em*.6);
+    }
+    @include tablet {
+      
+    }
+    @include phone {
+      font-size: $head1-l;
+    }
+  }
+
+  &__description {
+    margin-bottom: (7.9rem/$maintext*1em);
+    font-family: 'Open Sans', sans-serif;
+    font-size: $maintext;
+    line-height: (50/24);
+    text-transform: none;
+    color: $mainblack;
+    @include laptop {
+      font-size: $maintext-l;
+      margin-bottom: (7.9rem/$maintext*1em*.6);
+    }
+    @include tablet {
+      font-size: $maintext-xxl;
+    }
+    @include phone {
+      font-size: $maintext-fix;
+    }
+  }
+
+  &__first-p {
+    margin-bottom: (6rem/$maintext*1em);
+    @include laptop {
+      margin-bottom: (6rem/$maintext*1em*.6);
+    }
+  }
+
+  &__signature {
+    @include laptop {
+
+    }
+    @include tablet {
+      width: 20%;
+    }
+    @include phone {
+      width: 30%;
+    }
+  }
+
 }
-
-.about-me__layout-left {
-  flex: 1 1;
-  order: -1;
-  @include laptop {
-    flex: 4 1;
-  }
-}
-
-.about-me__layout-right {
-  padding-left: (54px/(1920px-167px*2)*100%);
-  flex: 1 1;
-  align-self: center;
-  @include laptop {
-    flex: 5 1;
-  }
-  @include tablet {
-    margin-bottom: 30px;
-  }
-}
-
-.about-me__photo {
-  width: 100%;
-  height: auto;
-  @include tablet {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.about-me__headline {
-  margin-bottom: (8.6rem/$head1*1em);
-  font-size: $head1;
-  color: $mainblack;
-  @include laptop {
-    margin-bottom: (8.6rem/$head1*1em*.6);
-  }
-  @include tablet {
-    
-  }
-  @include phone {
-    font-size: $head1-l;
-  }
-}
-
-.about-me__description {
-  margin-bottom: (7.9rem/$maintext*1em);
-  font-family: 'Open Sans', sans-serif;
-  font-size: $maintext;
-  line-height: (50/24);
-  text-transform: none;
-  color: $mainblack;
-  @include laptop {
-    font-size: $maintext-l;
-    margin-bottom: (7.9rem/$maintext*1em*.6);
-  }
-  @include tablet {
-    font-size: $maintext-xxl;
-  }
-  @include phone {
-    font-size: $maintext-fix;
-  }
-}
-
-.about-me__first-p {
-  margin-bottom: (6rem/$maintext*1em);
-  @include laptop {
-    margin-bottom: (6rem/$maintext*1em*.6);
-  }
-}
-
-.about-me__signature {
-  @include laptop {
-
-  }
-  @include tablet {
-    width: 20%;
-  }
-  @include phone {
-    width: 30%;
-  }
-}
-
 .contacts {
   color: $mainblack;
   text-align: center;
-}
 
-.contacts__channel {
-  margin-bottom: (32px/$head3*.1em*1rem/1px);
-  font-size: $head3;
-  font-weight: bold;
-  @include tablet {
-    font-size: $head3-xl;
+  &__channel {
+    margin-bottom: (32px/$head3*.1em*1rem/1px);
+    font-size: $head3;
+    font-weight: bold;
+    @include tablet {
+      font-size: $head3-xl;
+    }
+    @include phone {
+      font-size: $head3-xl;
+    }
   }
-  @include phone {
-    font-size: $head3-xl;
-  }
-}
 
-.contacts__email {
-  font-size: $head1;
-  margin-bottom: (53px/$head1*.1em*1rem/1px);
-  @include tablet {
-    font-size: $head1-xl;
+  &__email {
+    font-size: $head1;
+    margin-bottom: (53px/$head1*.1em*1rem/1px);
+    @include tablet {
+      font-size: $head1-xl;
+    }
+    @include phone {
+      font-size: $head1-xl;
+    }
   }
-  @include phone {
-    font-size: $head1-xl;
-  }
-}
 
-.contacts__phone {
-  font-size: $head2;
-  margin-bottom: (60px/$head2*.1em*1rem/1px);
-  @include tablet {
-    font-size: $head2-xl;
+  &__phone {
+    font-size: $head2;
+    margin-bottom: (60px/$head2*.1em*1rem/1px);
+    @include tablet {
+      font-size: $head2-xl;
+    }
+    @include phone {
+      font-size: $head2-xl;
+    }
   }
-  @include phone {
-    font-size: $head2-xl;
-  }
+
 }
 
 .copyright {
   text-align: center;
   padding: (43px/1920px*100%) 0 0;  //41px & 41px-5px(lh)
   border-top: 1px solid $maingray;
-}
 
-.copyright__text {
-  font-size: $commontext;
+  &__text {
+    font-size: $commontext;
+  }
+
 }
 
 .document {
@@ -164,72 +167,71 @@
 
 .footer {
   padding-top: (200px/1920px*100%);
-}
 
-.footer__contacts {
-}
+  &__copyright {
+    margin-top: (205px/1920px*100%);
+  }
 
-.footer__copyright {
-  margin-top: (205px/1920px*100%);
 }
 
 .gallery {
-}
 
-.gallery__item {
-  display: inline-block;
-  width: (279px/(1920px - $o-pad-m*2)*100%);
-  margin-right: (50px/(1920px - $o-pad-m*2)*100%);
-  margin-left: -4px;
-  @include phone {
-    width: 47%;
-    margin-right: 6%;
+  &__item {
+    display: inline-block;
+    width: (279px/(1920px - $o-pad-m*2)*100%);
+    margin-right: (50px/(1920px - $o-pad-m*2)*100%);
+    margin-left: -4px;
+    @include phone {
+      width: 47%;
+      margin-right: 6%;
+    }
   }
-}
 
-.gallery__item:nth-child(5n+5) {
-  margin-right: 0;
-  @include phone {
-    margin-right: 6%;
-  }
-}
-
-.gallery__item:nth-child(2n+2) {
-  @include phone {
+  &__item:nth-child(5n+5) {
     margin-right: 0;
+    @include phone {
+      margin-right: 6%;
+    }
   }
-}
 
-.gallery__item:nth-child(n+6) {
-  margin-top: (50px/(1920px - $o-pad-m*2)*100%);
-  @include phone {
-    margin-top: 0;
+  &__item:nth-child(2n+2) {
+    @include phone {
+      margin-right: 0;
+    }
   }
-}
 
-.gallery__item:nth-child(n+2) {
-  @include phone {
-    margin-top: 6%;
+  &__item:nth-child(n+6) {
+    margin-top: (50px/(1920px - $o-pad-m*2)*100%);
+    @include phone {
+      margin-top: 0;
+    }
   }
-}
 
-.gallery__img {
-  width: 100%;
-  height: auto;
-}
+  &__item:nth-child(n+2) {
+    @include phone {
+      margin-top: 6%;
+    }
+  }
 
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+}
 .header {
   background: transparent url('../img/background.jpg') 0 0 no-repeat;
   background-size: cover;
   padding-top: (147px/1920px*100%);
-}
 
-.header__logo {
-  margin-top: (148px/1920px*100%);
-}
+  &__logo {
+    margin-top: (148px/1920px*100%);
+  }
 
-.header__scroll {
-  margin-top: (122px/1920px*100%);
+  &__scroll {
+    margin-top: (122px/1920px*100%);
+  }
+
 }
 
 
@@ -243,9 +245,6 @@ $logopad: 5.5rem;
   padding-top: ($logoheight + $logopad);
   background: transparent url('../img/logo.png') 50% 0 no-repeat;
   background-size: auto $logoheight;
-  @include laptop {
-    
-  }
   @include tablet {
     background-size: auto $logoheight-l;
     padding-top: ($logoheight-l + $logopad);
@@ -255,22 +254,22 @@ $logopad: 5.5rem;
     padding-top: ($logoheight-xl + $logopad);
     
   }
-}
 
-.logo__text {
-  font-size: $head1;
-  @include tablet {
-    font-size: $head1-l;
+  &__text {
+    font-size: $head1;
+    @include tablet {
+      font-size: $head1-l;
+    }
+    @include phone {
+      font-size: $head1-xl;
+    }
   }
-  @include phone {
-    font-size: $head1-xl;
+
+  &__text_style_bold {
+    font-weight: bold;
   }
-}
 
-.logo__text_style_bold {
-  font-weight: bold;
 }
-
 .menu {
   position: fixed;
   top: 0;
@@ -279,10 +278,7 @@ $logopad: 5.5rem;
   font-size: $maintext;
   text-align: center;
   padding: (41px/1920px*100%) 0 (36px/1920px*100%);  //41px & 41px-5px(lh)
-  background: url('../../img/background.jpg') no-repeat 0 0 fixed;
-  background-size: 100%;
-  margin-left: $pagepad;
-  margin-right: $pagepad;
+  background-color: rgba(150, 150, 150, .7);
   border-bottom: 1px solid $maingray;
   @include laptop {
     font-size: $maintext-l;
@@ -293,28 +289,28 @@ $logopad: 5.5rem;
   @include phone {
     font-size: $maintext-fix;
   }
-}
 
-.menu__item {
-  display: inline-block;
-  padding-right: (42.2px/$maintext*.1em*1rem/1px);  //50px
-  @include phone {
-    padding-right: 5px;
+  &__item {
+    display: inline-block;
+    padding-right: (42.2px/$maintext*.1em*1rem/1px);  //50px
+    @include phone {
+      padding-right: 5px;
+    }
   }
-}
 
-.menu__link {
-  text-decoration: none;
-  color: $maingray;
-}
+  &__link {
+    text-decoration: none;
+    color: $maingray;
+  }
 
-.menu__item:last-child {
-  padding-right: 0;
-  @include phone {
+  &__item:last-child {
     padding-right: 0;
+    @include phone {
+      padding-right: 0;
+    }
   }
-}
 
+}
 .page {
   font-family: Nexa, sans-serif;
   text-transform: uppercase;
@@ -334,68 +330,66 @@ $logopad: 5.5rem;
   }
   @include phone {
   }
-}
 
-.portfolio__headline {
-  font-size: $head1;
-  margin-top: (88px/$head1*.1rem*1em/1px);
-  margin-bottom: (80px/$head1*.1rem*1em/1px);
-  @include tablet {
-    font-size: $head1-l;
+  &__headline {
+    font-size: $head1;
+    margin-top: (88px/$head1*.1rem*1em/1px);
+    margin-bottom: (80px/$head1*.1rem*1em/1px);
+    @include tablet {
+      font-size: $head1-l;
+    }
+    @include phone {
+      font-size: $head1-xl;
+    }
   }
-  @include phone {
-    font-size: $head1-xl;
+
+  &__scroll {
+    margin-top: 75px;
   }
-}
 
-.portfolio__scroll {
-  margin-top: 75px;
 }
-
 .scroll {
   text-align: center;
-}
 
-.scroll__text {
-  font-weight: bold;
-  font-size: $commontext;
-  margin-bottom: 20px;
-  @include laptop {
-    font-size: $commontext-l;
+  &__text {
+    font-weight: bold;
+    font-size: $commontext;
+    margin-bottom: 20px;
+    @include laptop {
+      font-size: $commontext-l;
+    }
+    @include tablet {
+      font-size: $commontext-xl;
+    }
+    @include phone {
+      font-size: $commontext-fix;
+    }
   }
-  @include tablet {
-    font-size: $commontext-xl;
-  }
-  @include phone {
-    font-size: $commontext-fix;
-  }
-}
 
-.scroll__img {
-  @include phone {
-    width: 8%;
-    height: auto;
+  &__img {
+    @include phone {
+      width: 8%;
+      height: auto;
+    }
   }
-}
 
+}
 .section {
   padding-bottom: (54px/1920px*100%);
 }
 
 .social__button:not(:last-child) {
   margin-right: 20px;
-}
 
-.social__button {
-}
+  &__img {
+    @include tablet {
+      width: 8%;
+      height: auto;
+    }
+    @include phone {
+      width: 10%;
+      height: auto;
+    }
+  }
 
-.social__img {
-  @include tablet {
-    width: 8%;
-    height: auto;
-  }
-  @include phone {
-    width: 10%;
-    height: auto;
-  }
 }

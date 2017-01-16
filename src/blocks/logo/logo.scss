@@ -9,9 +9,6 @@ $logopad: 5.5rem;
   padding-top: ($logoheight + $logopad);
   background: transparent url('../img/logo.png') 50% 0 no-repeat;
   background-size: auto $logoheight;
-  @include laptop {
-    
-  }
   @include tablet {
     background-size: auto $logoheight-l;
     padding-top: ($logoheight-l + $logopad);
@@ -21,18 +18,19 @@ $logopad: 5.5rem;
     padding-top: ($logoheight-xl + $logopad);
     
   }
-}
 
-.logo__text {
-  font-size: $head1;
-  @include tablet {
-    font-size: $head1-l;
+  &__text {
+    font-size: $head1;
+    @include tablet {
+      font-size: $head1-l;
+    }
+    @include phone {
+      font-size: $head1-xl;
+    }
   }
-  @include phone {
-    font-size: $head1-xl;
-  }
-}
 
-.logo__text_style_bold {
-  font-weight: bold;
+  &__text_style_bold {
+    font-weight: bold;
+  }
+
 }

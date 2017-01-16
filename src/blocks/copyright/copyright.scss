@@ -2,8 +2,9 @@
   text-align: center;
   padding: (43px/1920px*100%) 0 0;  //41px & 41px-5px(lh)
   border-top: 1px solid $maingray;
-}
 
-.copyright__text {
-  font-size: $commontext;
+  &__text {
+    font-size: $commontext;
+  }
+
 }

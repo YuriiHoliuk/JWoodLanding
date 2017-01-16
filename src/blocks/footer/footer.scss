@@ -1,10 +1,8 @@
 .footer {
   padding-top: (200px/1920px*100%);
-}
 
-.footer__contacts {
-}
+  &__copyright {
+    margin-top: (205px/1920px*100%);
+  }
 
-.footer__copyright {
-  margin-top: (205px/1920px*100%);
 }
